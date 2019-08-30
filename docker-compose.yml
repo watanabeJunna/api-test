@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  db:
+    image: "mongo:3.4.22-xenial"
+    ports:
+      - "27017:27017"
+  api:
+    build: api
+    command: go run main.go
+volumes:
+  db:
+  configdb:
