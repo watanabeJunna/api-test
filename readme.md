@@ -31,3 +31,5 @@ $ docker-compose run
 ```
 $ ./node_modules/.bin/ts-node index.ts
 ```
+
+In Docker Toolbox, use IP address instead of localhost
