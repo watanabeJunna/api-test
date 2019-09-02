@@ -8,6 +8,6 @@ services:
   api:
     build: api
     command: go run main.go
-volumes:
-  db:
-  configdb:
+    volumes: 
+      - ./api:/go/src/api
+    working_dir: /go/src/api

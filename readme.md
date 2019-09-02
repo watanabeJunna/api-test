@@ -13,9 +13,10 @@ docker-compose|contaier name
 $ docker-compose up db
 ```
 
-
-### insert container to container
+### up go container
 
 ```
-$ docker-compose run api
+$ docker-compose build api
+$ docker-compose run api dep init
+$ docker-compose run
 ```

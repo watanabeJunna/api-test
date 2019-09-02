@@ -1,15 +1,25 @@
 import { MongoError } from "mongodb"
 import mongoose from "mongoose"
-import Account, { Struct } from "./Struct"
+import User, { IUser } from "./User"
 
-mongoose.connect('mongodb://localhost:27017/test', {
+const options = {
     useNewUrlParser: true
-}, (err: MongoError) => {
-    if (err) throw err
-})
+}
 
-Account.find(<Struct | {}>{}, (err: Error, res: any) => {
-    if (err) throw err
+const callback = (err: MongoError) => {
+    if (err) {
+        throw err
+    }
+}
+
+mongoose.connect('mongodb://localhost:27017/test', options, callback)
+
+User.find(<IUser | {}>{}, (err: Error, res: any) => {
+    if (err) {
+        throw err
+    }
+
     console.log(res)
+
     mongoose.disconnect()
 })
