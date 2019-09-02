@@ -23,13 +23,13 @@ $ docker-compose run api dep init
 ### run api container program
 
 ```
-$ docker-compose run
+$ docker-compose run api
 ```
 
 ### run host program
 
 ```
-$ ./node_modules/.bin/ts-node index.ts
+$ npm i && ./node_modules/.bin/ts-node index.ts
 ```
 
 In Docker Toolbox, use IP address instead of localhost
